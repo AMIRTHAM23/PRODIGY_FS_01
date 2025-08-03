@@ -12,7 +12,7 @@ function Register() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/auth/login", data);
+      const res = await axios.post("https://prodigy-fs-01-h4t8.onrender.com", data);
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
       toast.success('Registered successfully');
