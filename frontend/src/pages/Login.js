@@ -14,9 +14,10 @@ function Login() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        'https://prodigy-fs-01-h4t8.onrender.com/api/auth/login',
-        form
-      );
+  'https://prodigy-fs-01-h4t8.onrender.com/api/auth/login',
+  form
+);
+
 
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
